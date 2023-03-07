@@ -78,7 +78,7 @@ export default {
       this.dialogVisible = false;
     },
     ret(){
-      window.location = "main";
+      window.location = "/";
     },
 
     removePost(post){

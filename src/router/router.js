@@ -1,10 +1,13 @@
 import Main from "@/pages/Main";
 import {createRouter, createWebHistory} from "vue-router";
 import NotesPage from "@/pages/NotesPage";
+import App from "@/App";
+
+
 
 const routes = [
     {
-        path: '/main',
+        path: '/',
         component: Main
     },
     {

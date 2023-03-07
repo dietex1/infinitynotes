@@ -83,7 +83,6 @@ export default {
   justify-content: center;
   align-items: center;
   row-gap: 5px;
-  border: solid;
   border-radius: 5px;
   border: 2px solid #acc7ec;
   padding: 20px;
@@ -91,7 +90,8 @@ export default {
   margin: auto;
   margin-top: 100px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);*/
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 label {
