@@ -1,4 +1,4 @@
 Notes web   
 
-[![Showcase](~/InfinityNotes.mov)](/~/InfinityNotes.mov)
+[![Showcase](~/infinitynotes/InfinityNotes.mov)](~/infinitynotes/InfinityNotes.mov)
 
