@@ -1,22 +1,35 @@
-image: node:latest
-
 stages:
   - build
-  - test
-
-cache:
-  paths:
-    - node_modules/
-
-before_script:
-  - npm install
+  - deploy
 
 build:
+  image: node:latest    
   stage: build
+  variables: 
+    # Replace this with your site URL
+    PUBLIC_URL: https://dietex1.gitlab.io/infinitynotes/
+    GIT_SUBMODULE_STRATEGY: recursive
   script:
+    - npm install    
     - npm run build
+  artifacts:
+    paths:
+      - build/    
+  only:
+    - main
 
-test:
-  stage: test
+pages:
+  image: alpine:latest
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none        # Do not clone git repo
+    NODE_ENV: production
+    PUBLIC_URL: https://dietex1.gitlab.io/infinitynotes/
   script:
-    - npm run test
+    # Rename the CRA `build` folder to `public`
+    - mv build public         
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
