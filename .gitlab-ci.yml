@@ -14,7 +14,7 @@ build:
     - npm run build
   artifacts:
     paths:
-      - build/    
+      - dist/    
   only:
     - main
 
@@ -27,7 +27,7 @@ pages:
     PUBLIC_URL: https://dietex1.gitlab.io/infinitynotes/
   script:
     # Rename the CRA `build` folder to `public`
-    - mv build public         
+    - mv dist public         
   artifacts:
     paths:
       - public
