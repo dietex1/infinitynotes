@@ -1,4 +1,9 @@
 Notes web   
 
-[![Showcase](~/infinitynotes/InfinityNotes.mov)](~/infinitynotes/InfinityNotes.mov)
+
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true">
+    <source src="~/Showcase.mp4" type="video/mp4">
+  </video>
+</figure>
 
