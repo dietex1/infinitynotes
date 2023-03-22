@@ -8,11 +8,11 @@ import App from "@/App";
 const routes = [
     {
         path: '/notes',
-        component: NotesPage
+        component: Main
     },
     {
-        path: '/notes',
-        component: Main
+        path: '/',
+        component: NotesPage
     }
 ]
 
