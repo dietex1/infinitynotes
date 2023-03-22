@@ -66,7 +66,7 @@ export default {
         this.error = fail;
       } else {
 
-        window.location = "notes";
+        window.location = "/";
       }
     },
       showAlert() {

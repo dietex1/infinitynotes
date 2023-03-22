@@ -7,12 +7,12 @@ import App from "@/App";
 
 const routes = [
     {
-        path: '/',
-        component: Main
+        path: '/notes',
+        component: NotesPage
     },
     {
         path: '/notes',
-        component: NotesPage
+        component: Main
     }
 ]
 

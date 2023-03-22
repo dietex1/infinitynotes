@@ -78,7 +78,7 @@ export default {
       this.dialogVisible = false;
     },
     ret(){
-      window.location = "/";
+      window.location = "/notes";
     },
 
     removePost(post){
