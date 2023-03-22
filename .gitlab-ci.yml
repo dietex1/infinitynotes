@@ -1,14 +1,29 @@
-pages:
-  image: node:latest-npm7
-  stage: deploy
+image: node:latest-npm7
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  stage: build
   script:
     - npm ci
     - npm run build
-    - mv public public-vue
+  artifacts:
+    paths:
+      - dist/
+
+pages:
+  stage: deploy
+  script:
     - mv dist public
     - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\)$' -exec gzip -f -k {} \;
   artifacts:
     paths:
-      - public
+      - public/
   only:
     - master
