@@ -1,4 +1,4 @@
-image: node:latest-npm7
+image: node:latest
 
 stages:
   - build
